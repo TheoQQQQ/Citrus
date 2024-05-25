@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citrus Fruits - Mediterranean Delight</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #FFFAED; /* Light Beige Background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Flexbox Reset */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Top Banner Styles */
+        .top-banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FFFCFC; /* Very Light White */
+            padding: 0.5rem 1rem;
+            border-bottom: 0.5px solid #333; /* Thinner line */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: top 0.3s; /* Smooth transition for hiding */
+        }
+
+        .top-banner .logo a {
+            text-decoration: none;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2rem;
+            color: #FF595E; /* Red */
+        }
+
+        .top-banner .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .top-banner .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .top-banner .icons {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem; /* Corrected gap value */
+        }
+
+        .top-banner .icons i {
+            font-size: 1.2rem;
+            cursor: pointer;
+            font-weight: 100;
+        }
+
+        .top-banner .icons .icon-link {
+            color: inherit; /* Maintain original icon color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            position: relative;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 0.5px solid #333; /* Thinner line */
+            background: url('citrustre.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .hero h2 {
+            margin: 0 0 1rem;
+            color: #333;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5); /* Optional overlay for better text readability */
+            z-index: 0;
+        }
+
+        /* Main Card Styles */
+        .main-gallery {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-card {
+            border: 0.5px solid #333; /* Thinner line */
+            padding: 2rem;
+            text-align: center;
+            width: 100%;
+            height: 300px; /* Adjusted height */
+            background-size: cover;
+            color: white; /* Ensure text is readable */
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add text shadow for readability */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0; /* Remove margin */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-card.story {
+            background-image: url('story.jpg');
+            background-position: center center;
+        }
+
+        .main-card.goals {
+            background-image: url('goalstwo.jpg');
+            background-position: center center;
+        }
+
+        .main-card.history {
+            background-image: url('history.jpg');
+            background-position: bottom center;
+        }
+
+        .main-card:hover .text-card {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .main-card .text-card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #F9FFF7; /* White, same as top banner */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Playfair Display', cursive; /* Match top banner font */
+            font-size: 1.5rem; /* Adjusted font size */
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease; /* Slower transition */
+        }
+
+        .main-card h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 2.5rem; /* Larger font size */
+        }
+
+        .main-card a {
+            color: inherit; /* Inherit color from parent */
+            text-decoration: none;
+        }
+
+        @media (min-width: 1024px) {
+            .main-card {
+                height: 500px; /* Adjust height for larger screens */
+            }
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #FFFCFC; /* Light Blue */
+            text-align: left;
+            padding: 0.25rem 1rem; /* Smaller padding */
+            border-top: 0.5px solid #333; /* Thinner line */
+            margin-top: auto; /* Push footer to the bottom */
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            color: #FF595E;
+            font-size: 0.8rem;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="top-banner">
+        <div class="logo"><a href="index.html">Citrus</a></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="fruits.html">Fruits</a>
+            <a href="recipes.html">Recipes</a>
+        </div>
+        <div class="icons">
+            <a href="favourites.html" class="icon-link"><i class="fa fa-lemon"></i></a>
+            <i class="fa fa-bars"></i>
+            <i class="fa fa-search"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to the World of Citrus Fruits</h2>
+            <p>Explore the vibrant and refreshing flavors of Mediterranean citrus fruits.</p>
+        </section>
+
+        <section class="main-gallery">
+            <div class="main-card story">
+                <div class="text-card">Our Story</div>
+                <!-- Content for the first main card -->
+            </div>
+            <div class="main-card goals">
+                <div class="text-card">Our Goals</div>
+                <!-- Content for the second main card -->
+            </div>
+            <div class="main-card history">
+                <div class="text-card">Our History</div>
+                <!-- Content for the third main card -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>@citrus 2024</p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            let st = window.pageYOffset || document.documentElement.scrollTop;
+            const topBanner = document.querySelector('.top-banner');
+            if (st > lastScrollTop) {
+                topBanner.style.top = '-100px'; // Hide top banner when scrolling down
+            } else {
+                topBanner.style.top = '0'; // Show top banner when scrolling up
+            }
+            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+        });
+    </script>
+</body>
+</html>

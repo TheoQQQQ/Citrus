@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citrus Fruits - Mediterranean Delight</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #FFFAED; /* Light Beige Background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Flexbox Reset */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Top Banner Styles */
+        .top-banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #FFFCFC; /* Very Light White */
+            padding: 0.5rem 1rem;
+            border-bottom: 0.5px solid #333; /* Thinner line */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: top 0.3s; /* Smooth transition for hiding */
+        }
+
+        .top-banner .logo a {
+            text-decoration: none;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 2rem;
+            color: #FF595E; /* Red */
+        }
+
+        .top-banner .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .top-banner .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .top-banner .icons {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem; /* Corrected gap value */
+        }
+
+        .top-banner .icons i {
+            font-size: 1.2rem;
+            cursor: pointer;
+            font-weight: 100;
+        }
+
+         .top-banner .icons .icon-link {
+            color: inherit; /* Maintain original icon color */
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            position: relative;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 0.5px solid #333; /* Thinner line */
+            background: url('picoe.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        .hero h2 {
+            margin: 0 0 1rem;
+            color: #333;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.5); /* Optional overlay for better text readability */
+            z-index: 0;
+        }
+
+        /* Fruit Gallery Styles */
+        .fruit-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem;
+            flex: 1; /* Allow gallery to grow and push footer down */
+        }
+
+        .fruit-card {
+            border: 0.5px solid #333; /* Thinner line */
+            padding: 2rem;
+            text-align: center;
+            width: 100%;
+            max-width: 1000px;
+            height: 300px; /* Adjusted height */
+            margin: 0 auto;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            color: white; /* Ensure text is readable */
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add text shadow for readability */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fruit-card:hover {
+            filter: brightness(0.94);
+        }
+
+        .fruit-card h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 2rem; /* Larger font size */
+        }
+
+        .fruit-card a {
+            color: inherit; /* Inherit color from parent */
+            text-decoration: none;
+        }
+
+        .fruit-card .fruit-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #F9FFF7; /* White, same as top banner */
+            color: #333;
+            padding: 1rem;
+            text-align: center;
+            font-family: 'Playfair Display', cursive; /* Match top banner font */
+            display: block;
+            border-top: 0.5px solid #333; /* Red border line at the top */
+            text-shadow: none; /* Remove text shadow */
+        }
+
+        /* Specific Fruit Card Backgrounds */
+        .fruit-card.orange {
+            background-image: url('orange.jpg');
+        }
+
+        .fruit-card.lemon {
+            background-image: url('lemon.jpg');
+        }
+
+        .fruit-card.grapefruit {
+            background-image: url('grape.jpg');
+        }
+
+        .fruit-card.lime {
+            background-image: url('lime.jpg');
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #FFFCFC; /* Light Blue */
+            text-align: left;
+            padding: 0.25rem 1rem; /* Smaller padding */
+            border-top: 0.5px solid #333; /* Thinner line */
+            margin-top: auto; /* Push footer to the bottom */
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            color: #FF595E;
+            font-size: 0.8rem;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="top-banner">
+        <div class="logo"><a href="index.html">Citrus</a></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="fruits.html">Fruits</a>
+            <a href="recipes.html">Recipes</a>
+        </div>
+        <div class="icons">
+            <a href="favourites.html" class="icon-link"><i class="fa fa-lemon"></i></a>
+            <i class="fa fa-bars"></i>
+            <i class="fa fa-search"></i>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Discover the Tastiest Fruits From the Citrus Family</h2>
+            <p>Dive deeper into the tastiest fruits.</p>
+        </section>
+
+        <section class="fruit-gallery">
+            <div class="fruit-card orange">
+                <div class="card-content">
+                    <h3><a href="orange.html">Orange</a></h3>
+                    <div class="fruit-text">Sweet and juicy, perfect for a sunny day.</div>
+                </div>
+            </div>
+            <div class="fruit-card lemon">
+                <div class="card-content">
+                    <h3><a href="lemon.html">Lemon</a></h3>
+                    <div class="fruit-text">Tart and zesty, great for cooking and drinks.</div>
+                </div>
+            </div>
+            <div class="fruit-card grapefruit">
+                <div class="card-content">
+                    <h3><a href="grapefruit.html">Grapefruit</a></h3>
+                    <div class="fruit-text">Refreshing and tangy, a great start to the day.</div>
+                </div>
+            </div>
+            <div class="fruit-card lime">
+                <div class="card-content">
+                    <h3><a href="lime.html">Lime</a></h3>
+                    <div class="fruit-text">Fresh and tangy, perfect for cocktails.</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>@citrus 2024</p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            let st = window.pageYOffset || document.documentElement.scrollTop;
+            const topBanner = document.querySelector('.top-banner');
+            if (st > lastScrollTop) {
+                topBanner.style.top = '-100px'; // Hide top banner when scrolling down
+            } else {
+                topBanner.style.top = '0'; // Show top banner when scrolling up
+            }
+            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+        });
+    </script>
+</body>
+</html>
