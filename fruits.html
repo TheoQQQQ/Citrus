@@ -7,10 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* General Styles */
         body {
             font-family: 'Playfair Display', serif;
-            background-color: #FFFAED; /* Light Beige Background */
+            background-color: #FFFAED;
             color: #333;
             margin: 0;
             padding: 0;
@@ -19,30 +18,27 @@
             min-height: 100vh;
         }
 
-        /* Flexbox Reset */
         * {
             box-sizing: border-box;
         }
 
-        /* Top Banner Styles */
         .top-banner {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #FFFCFC; /* Very Light White */
-            padding: 0.5rem 1rem;
-            border-bottom: 0.5px solid #333; /* Thinner line */
+            background-color: #FFFCFC;
+            border-bottom: 0.5px solid #333;
             position: sticky;
             top: 0;
             z-index: 1000;
-            transition: top 0.3s; /* Smooth transition for hiding */
+            transition: top 0.3s;
         }
 
         .top-banner .logo a {
             text-decoration: none;
             font-family: 'Bebas Neue', cursive;
             font-size: 2rem;
-            color: #FF595E; /* Red */
+            color: #FF595E;
         }
 
         .top-banner .nav-links {
@@ -60,7 +56,7 @@
         .top-banner .icons {
             display: flex;
             align-items: center;
-            gap: 0.6rem; /* Corrected gap value */
+            gap: 0.6rem;
         }
 
         .top-banner .icons i {
@@ -70,17 +66,15 @@
         }
 
          .top-banner .icons .icon-link {
-            color: inherit; /* Maintain original icon color */
-            text-decoration: none; /* Remove underline */
+            color: inherit;
+            text-decoration: none;
         }
 
-        /* Hero Section Styles */
         .hero {
             position: relative;
             padding: 2rem;
             text-align: center;
-            border-bottom: 0.5px solid #333; /* Thinner line */
-            background: url('picoe.jpg') no-repeat center center;
+            border-bottom: 0.5px solid #333;
             background-size: cover;
         }
 
@@ -104,32 +98,31 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.5); /* Optional overlay for better text readability */
+            background-color: rgba(255, 255, 255, 0.5);
             z-index: 0;
         }
 
-        /* Fruit Gallery Styles */
         .fruit-gallery {
             display: flex;
             flex-direction: column;
             gap: 2rem;
             padding: 2rem;
-            flex: 1; /* Allow gallery to grow and push footer down */
+            flex: 1;
         }
 
         .fruit-card {
-            border: 0.5px solid #333; /* Thinner line */
+            border: 0.5px solid #333;
             padding: 2rem;
             text-align: center;
             width: 100%;
             max-width: 1000px;
-            height: 300px; /* Adjusted height */
+            height: 300px;
             margin: 0 auto;
             position: relative;
             background-size: cover;
             background-position: center;
-            color: white; /* Ensure text is readable */
-            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add text shadow for readability */
+            color: white;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -141,11 +134,11 @@
 
         .fruit-card h3 {
             margin: 1rem 0 0.5rem;
-            font-size: 2rem; /* Larger font size */
+            font-size: 2rem;
         }
 
         .fruit-card a {
-            color: inherit; /* Inherit color from parent */
+            color: inherit;
             text-decoration: none;
         }
 
@@ -154,17 +147,16 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background-color: #F9FFF7; /* White, same as top banner */
+            background-color: #F9FFF7;
             color: #333;
             padding: 1rem;
             text-align: center;
-            font-family: 'Playfair Display', cursive; /* Match top banner font */
+            font-family: 'Playfair Display', cursive;
             display: block;
-            border-top: 0.5px solid #333; /* Red border line at the top */
-            text-shadow: none; /* Remove text shadow */
+            border-top: 0.5px solid #333;
+            text-shadow: none;
         }
 
-        /* Specific Fruit Card Backgrounds */
         .fruit-card.orange {
             background-image: url('orange.jpg');
         }
@@ -181,13 +173,12 @@
             background-image: url('lime.jpg');
         }
 
-        /* Footer Styles */
         footer {
-            background-color: #FFFCFC; /* Light Blue */
+            background-color: #FFFCFC;
             text-align: left;
-            padding: 0.25rem 1rem; /* Smaller padding */
-            border-top: 0.5px solid #333; /* Thinner line */
-            margin-top: auto; /* Push footer to the bottom */
+            padding: 0.25rem 1rem;
+            border-top: 0.5px solid #333;
+            margin-top: auto;
             width: 100%;
         }
 
@@ -258,11 +249,11 @@
             let st = window.pageYOffset || document.documentElement.scrollTop;
             const topBanner = document.querySelector('.top-banner');
             if (st > lastScrollTop) {
-                topBanner.style.top = '-100px'; // Hide top banner when scrolling down
+                topBanner.style.top = '-100px';
             } else {
-                topBanner.style.top = '0'; // Show top banner when scrolling up
+                topBanner.style.top = '0';
             }
-            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+            lastScrollTop = st <= 0 ? 0 : st;
         });
     </script>
 </body>
