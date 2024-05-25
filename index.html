@@ -7,10 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* General Styles */
+
         body {
             font-family: 'Playfair Display', serif;
-            background-color: #FFFAED; /* Light Beige Background */
+            background-color: #FFFAED;
             color: #333;
             margin: 0;
             padding: 0;
@@ -19,30 +19,28 @@
             min-height: 100vh;
         }
 
-        /* Flexbox Reset */
         * {
             box-sizing: border-box;
         }
 
-        /* Top Banner Styles */
         .top-banner {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #FFFCFC; /* Very Light White */
+            background-color: #FFFCFC;
             padding: 0.5rem 1rem;
-            border-bottom: 0.5px solid #333; /* Thinner line */
+            border-bottom: 0.5px solid #333;
             position: sticky;
             top: 0;
             z-index: 1000;
-            transition: top 0.3s; /* Smooth transition for hiding */
+            transition: top 0.3s;
         }
 
         .top-banner .logo a {
             text-decoration: none;
             font-family: 'Bebas Neue', cursive;
             font-size: 2rem;
-            color: #FF595E; /* Red */
+            color: #FF595E;
         }
 
         .top-banner .nav-links {
@@ -60,7 +58,7 @@
         .top-banner .icons {
             display: flex;
             align-items: center;
-            gap: 0.6rem; /* Corrected gap value */
+            gap: 0.6rem;
         }
 
         .top-banner .icons i {
@@ -70,16 +68,15 @@
         }
 
         .top-banner .icons .icon-link {
-            color: inherit; /* Maintain original icon color */
-            text-decoration: none; /* Remove underline */
+            color: inherit;
+            text-decoration: none;
         }
 
-        /* Hero Section Styles */
         .hero {
             position: relative;
             padding: 2rem;
             text-align: center;
-            border-bottom: 0.5px solid #333; /* Thinner line */
+            border-bottom: 0.5px solid #333;
             background: url('citrustre.jpg') no-repeat center center;
             background-size: cover;
         }
@@ -104,29 +101,27 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.5); /* Optional overlay for better text readability */
-            z-index: 0;
+            background-color: rgba(255, 255, 255, 0.5);
         }
 
-        /* Main Card Styles */
         .main-gallery {
             display: flex;
             flex-direction: column;
         }
 
         .main-card {
-            border: 0.5px solid #333; /* Thinner line */
+            border: 0.5px solid #333;
             padding: 2rem;
             text-align: center;
             width: 100%;
-            height: 300px; /* Adjusted height */
+            height: 300px;
             background-size: cover;
-            color: white; /* Ensure text is readable */
-            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add text shadow for readability */
+            color: white;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0; /* Remove margin */
+            margin: 0;
             position: relative;
             overflow: hidden;
         }
@@ -157,42 +152,41 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #F9FFF7; /* White, same as top banner */
+            background-color: #F9FFF7;
             color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            font-family: 'Playfair Display', cursive; /* Match top banner font */
-            font-size: 1.5rem; /* Adjusted font size */
+            font-family: 'Playfair Display', cursive;
+            font-size: 1.5rem;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.5s ease, visibility 0.5s ease; /* Slower transition */
+            transition: opacity 0.5s ease, visibility 0.5s ease;
         }
 
         .main-card h3 {
             margin: 1rem 0 0.5rem;
-            font-size: 2.5rem; /* Larger font size */
+            font-size: 2.5rem;
         }
 
         .main-card a {
-            color: inherit; /* Inherit color from parent */
+            color: inherit;
             text-decoration: none;
         }
 
         @media (min-width: 1024px) {
             .main-card {
-                height: 500px; /* Adjust height for larger screens */
+                height: 500px;
             }
         }
 
-        /* Footer Styles */
         footer {
-            background-color: #FFFCFC; /* Light Blue */
+            background-color: #FFFCFC;
             text-align: left;
-            padding: 0.25rem 1rem; /* Smaller padding */
-            border-top: 0.5px solid #333; /* Thinner line */
-            margin-top: auto; /* Push footer to the bottom */
+            padding: 0.25rem 1rem;
+            border-top: 0.5px solid #333;
+            margin-top: auto;
             width: 100%;
         }
 
@@ -228,15 +222,12 @@
         <section class="main-gallery">
             <div class="main-card story">
                 <div class="text-card">Our Story</div>
-                <!-- Content for the first main card -->
             </div>
             <div class="main-card goals">
                 <div class="text-card">Our Goals</div>
-                <!-- Content for the second main card -->
             </div>
             <div class="main-card history">
                 <div class="text-card">Our History</div>
-                <!-- Content for the third main card -->
             </div>
         </section>
     </main>
@@ -251,11 +242,11 @@
             let st = window.pageYOffset || document.documentElement.scrollTop;
             const topBanner = document.querySelector('.top-banner');
             if (st > lastScrollTop) {
-                topBanner.style.top = '-100px'; // Hide top banner when scrolling down
+                topBanner.style.top = '-100px';
             } else {
-                topBanner.style.top = '0'; // Show top banner when scrolling up
+                topBanner.style.top = '0';
             }
-            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+            lastScrollTop = st <= 0 ? 0 : st;
         });
     </script>
 </body>
