@@ -7,10 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* General Styles */
         body {
             font-family: 'Playfair Display', serif;
-            background-color: #FFFAED; /* Light Beige Background */
+            background-color: #FFFAED;
             color: #333;
             margin: 0;
             padding: 0;
@@ -19,30 +18,28 @@
             min-height: 100vh;
         }
 
-        /* Flexbox Reset */
         * {
             box-sizing: border-box;
         }
 
-        /* Top Banner Styles */
         .top-banner {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #FFFCFC; /* Very Light White */
+            background-color: #FFFCFC;
             padding: 0.5rem 1rem;
-            border-bottom: 0.5px solid #333; /* Thinner line */
+            border-bottom: 0.5px solid #333;
             position: sticky;
             top: 0;
             z-index: 1000;
-            transition: top 0.3s; /* Smooth transition for hiding */
+            transition: top 0.3s;
         }
 
         .top-banner .logo a {
             text-decoration: none;
             font-family: 'Bebas Neue', cursive;
             font-size: 2rem;
-            color: #FF595E; /* Red */
+            color: #FF595E;
         }
 
         .top-banner .nav-links {
@@ -60,8 +57,8 @@
         .top-banner .icons {
             display: flex;
             align-items: center;
-            gap: 0.6rem; /* Corrected gap value */
-            position: relative; /* To position the search bar absolutely */
+            gap: 0.6rem;
+            position: relative;
         }
 
         .top-banner .icons i {
@@ -71,52 +68,49 @@
         }
 
         .top-banner .icons .icon-link {
-            color: inherit; /* Maintain original icon color */
-            text-decoration: none; /* Remove underline */
+            color: inherit;
+            text-decoration: none;
         }
 
-        /* Search Bar Styles */
         .search-bar {
-            display: none; /* Initially hidden */
+            display: none;
             position: absolute;
-            top: 50%; /* Align vertically with the icon */
-            right: 3.2rem; /* Position to align with the icons */
-            transform: translateY(-50%); /* Center vertically */
+            top: 50%;
+            right: 3.2rem;
+            transform: translateY(-50%);
             width: 200px;
-            background-color: #FFFAF0; /* Lighter tone */
+            background-color: #FFFAF0;
             border: 0.5px solid #333;
             padding: 0.5rem;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             z-index: 1001;
-            font-family: 'Playfair Display', serif; /* Match the page font */
-            transition: opacity 0.5s ease, visibility 0.5s ease; /* Smoother and slower transition */
-            opacity: 0; /* Start hidden */
-            visibility: hidden; /* Hide visibility */
-            border-radius: 3px; /* Slightly rounded corners */
+            font-family: 'Playfair Display', serif;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            opacity: 0;
+            visibility: hidden;
+            border-radius: 3px;
         }
 
         .search-bar input {
             width: 100%;
             padding: 0.3rem;
             border: 1px solid #ddd;
-            font-family: 'Playfair Display', serif; /* Match the page font */
+            font-family: 'Playfair Display', serif;
             color: #333;
-            border-radius: 3px; /* Slightly rounded corners for input */
+            border-radius: 3px;
         }
 
-        /* Show search bar on hover */
         .icons:hover .search-bar {
             display: block;
-            opacity: 1; /* Make visible */
-            visibility: visible; /* Ensure visibility */
+            opacity: 1;
+            visibility: visible;
         }
 
-        /* Hero Section Styles */
         .hero {
             position: relative;
             padding: 2rem;
             text-align: center;
-            border-bottom: 0.5px solid #333; /* Thinner line */
+            border-bottom: 0.5px solid #333;
             background: url('kitchen.jpg') no-repeat center center;
             background-size: cover;
         }
@@ -141,49 +135,48 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.5); /* Optional overlay for better text readability */
+            background-color: rgba(255, 255, 255, 0.5);
             z-index: 0;
         }
 
-        /* Recipes Section Styles */
         .recipes {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
             padding: 2rem;
-            flex: 1; /* Allow gallery to grow and push footer down */
+            flex: 1;
         }
 
         @media (min-width: 1024px) {
             .recipes {
-                grid-template-columns: repeat(4, 1fr); /* Four columns on larger screens */
+                grid-template-columns: repeat(4, 1fr);
             }
         }
 
         .recipe-card {
-            border: 0.5px solid #333; /* Thinner line */
-            padding: 0.8rem; /* Slightly smaller padding */
+            border: 0.5px solid #333;
+            padding: 0.8rem; 
             text-align: center;
             width: 100%;
-            aspect-ratio: 0.95 / 1; /* Slightly reduce the aspect ratio */
+            aspect-ratio: 0.95 / 1;
             position: relative;
             background-size: cover;
-            background-position: center; /* Center the image by default */
-            color: white; /* Ensure text is readable */
-            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* Add text shadow for readability */
+            background-position: center;
+            color: white;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden; /* Hide overflow to ensure the pop-out effect is contained */
+            overflow: hidden;
         }
 
         .recipe-card h3 {
             margin: 1rem 0 0.5rem;
-            font-size: 1.4rem; /* Slightly smaller font size */
+            font-size: 1.4rem;
         }
 
         .recipe-card a {
-            color: inherit; /* Inherit color from parent */
+            color: inherit;
             text-decoration: none;
         }
 
@@ -192,26 +185,25 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background-color: #F9FFF7; /* White, same as top banner */
+            background-color: #F9FFF7;
             color: #333;
             padding: 0.5rem;
             text-align: center;
-            font-family: 'Playfair Display', cursive; /* Match top banner font */
-            display: flex; /* Use flexbox */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            border-top: 0.5px solid #333; /* Red border line at the top */
-            text-shadow: none; /* Remove text shadow */
-            height: 60px; /* Fixed height for consistency */
-            opacity: 0; /* Initially hidden */
-            transition: opacity 0.45s ease; /* Smooth transition for the appearance */
+            font-family: 'Playfair Display', cursive;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 0.5px solid #333;
+            text-shadow: none;
+            height: 60px;
+            opacity: 0;
+            transition: opacity 0.45s ease;
         }
 
         .recipe-card:hover .recipe-text {
-            opacity: 1; /* Show text on hover */
+            opacity: 1;
         }
 
-        /* Specific Recipe Card Backgrounds */
         .recipe-card.orange-muffins {
             background-image: url('orangemuffin.jpg');
         }
@@ -262,11 +254,11 @@
 
         /* Footer Styles */
         footer {
-            background-color: #FFFCFC; /* Light Blue */
+            background-color: #FFFCFC;
             text-align: left;
-            padding: 0.25rem 1rem; /* Smaller padding */
-            border-top: 0.5px solid #333; /* Thinner line */
-            margin-top: auto; /* Push footer to the bottom */
+            padding: 0.25rem 1rem;
+            border-top: 0.5px solid #333;
+            margin-top: auto;
             width: 100%;
         }
 
@@ -387,11 +379,11 @@
             let st = window.pageYOffset || document.documentElement.scrollTop;
             const topBanner = document.querySelector('.top-banner');
             if (st > lastScrollTop) {
-                topBanner.style.top = '-100px'; // Hide top banner when scrolling down
+                topBanner.style.top = '-100px';
             } else {
-                topBanner.style.top = '0'; // Show top banner when scrolling up
+                topBanner.style.top = '0';
             }
-            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+            lastScrollTop = st <= 0 ? 0 : st;
         });
 
         document.getElementById('search-icon').addEventListener('mouseover', function() {
